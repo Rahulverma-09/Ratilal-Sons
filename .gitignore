@@ -48,6 +48,8 @@ Thumbs.db
 *.db
 *.sqlite3
 
-# Uploads
-uploaded_pdfs/
-employee_document/
+# Uploads - keep directories but ignore contents
+uploaded_pdfs/*
+!uploaded_pdfs/README.md
+employee_document/*
+!employee_document/README.md
