@@ -8,15 +8,7 @@ export default defineConfig({
   server: {
     port: 4000,
     host: '0.0.0.0',
-    allowedHosts: ['localhost', '127.0.0.1'],
-
-    fs: {
-      allow: [
-        path.resolve(__dirname, '.'),
-        path.resolve(__dirname, '..')
-      ],
-      strict: true
-    },
+    allowedHosts: ['ratilalandsonscrm.onrender.com', 'localhost', '127.0.0.1'],
     proxy: {
       '/api': {
         target: 'https://ratilalandsons.onrender.com',
@@ -24,6 +16,13 @@ export default defineConfig({
         secure: false,
       }
     }
+  },
+  fs: {
+    allow: [
+      path.resolve(__dirname, '.'),
+      path.resolve(__dirname, '..')
+    ],
+    strict: true
   },
   plugins: [
     react(),
